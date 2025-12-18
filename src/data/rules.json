@@ -1,0 +1,66 @@
+[
+  {
+    "id": "1",
+    "category": "General Conduct",
+    "title": "Noise Control & Quiet Hours",
+    "description": "Guidelines to ensure a peaceful living environment for all residents during critical rest hours.",
+    "rules": [
+      "Quiet hours must be observed from 10:00 PM to 7:00 AM daily.",
+      "Construction work is strictly prohibited on Sundays and public holidays.",
+      "Loud music or parties in common areas require prior written permission."
+    ]
+  },
+  {
+    "id": "2",
+    "category": "Sanitation",
+    "title": "Waste Management & Disposal",
+    "description": "Protocols for maintaining hygiene and proper segregation of household waste.",
+    "rules": [
+      "Residents must segregate waste into Wet (Green bin) and Dry (Blue bin) categories.",
+      "Hazardous materials (batteries, medical waste) must be handed directly to collection staff.",
+      "Do not leave garbage bags outside apartment doors overnight."
+    ]
+  },
+  {
+    "id": "3",
+    "category": "Parking",
+    "title": "Vehicle Parking Policy",
+    "description": "Rules regarding the allocation and usage of parking spaces within the society premises.",
+    "rules": [
+      "Residents must park only in their designated numbered slots.",
+      "Guest vehicles are allowed only in visitor parking zones for a maximum of 24 hours.",
+      "Washing of cars is only permitted in the designated wash bay area."
+    ]
+  },
+  {
+    "id": "4",
+    "category": "Amenities",
+    "title": "Swimming Pool Usage",
+    "description": "Safety and hygiene regulations for residents utilizing the community swimming pool.",
+    "rules": [
+      "Shower is mandatory before entering the pool.",
+      "Proper swimwear must be worn at all times (no cotton clothing).",
+      "Glass bottles and food items are strictly prohibited on the pool deck."
+    ]
+  },
+  {
+    "id": "5",
+    "category": "Pets",
+    "title": "No Pets Allowed",
+    "description": "No dogs, cats, birs or any other animal are permitted. Service animal require prior approval and documentation",
+    "rules": [
+      "Pets are not allowed inside the apartment"
+    ]
+  },
+  {
+    "id": "6",
+    "category": "Security",
+    "title": "Visitor & Delivery Access",
+    "description": "Procedures for managing non-resident entry to maintain society security.",
+    "rules": [
+      "All visitors and delivery personnel must register at the main gate via the society app.",
+      "Door-to-door sales and soliciting are strictly prohibited.",
+      "Overnight stay for support staff requires prior registration with the management office."
+    ]
+  }
+]

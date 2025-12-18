@@ -1,5 +1,8 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
+import { readFile } from "node:fs/promises";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { z } from "zod";
 
 
@@ -46,7 +49,52 @@ server.registerTool("get_github_repos",
         return {
             content: [{ type: "text", text: `Github Repositories for ${username}: (${repos.length} repos) \n\n ${repoList}` }]
         }
-    })
+    }
+);
+
+// resource (data-source);
+
+server.registerResource("society_rules", "rules://all",
+    {
+        description: "Resource for all society rules",
+        mimeType: "application/json"
+    },
+    async (uri) => {
+        const uriString = uri.toJSON();
+        const __filename = fileURLToPath(import.meta.url);
+        const __dirname = path.dirname(__filename);
+
+        const rules = await readFile(path.resolve(__dirname, "../src/data/rules.json"), { encoding: "utf-8" });
+        return {
+            contents: [{
+                uri: uriString,
+                mimeType: "application/json",
+                text: rules
+            }]
+        }
+    }
+)
+
+//prompt;
+
+
+server.registerPrompt("explain_sql", {
+    title: "Sql Query explainer",
+    description: "explain the given sql query",
+    argsSchema: {
+        sql: z.string().describe("The sql query to explain")
+    }
+}, ({ sql }) => {
+    return {
+        messages: [{
+            role: "user",
+            content: {
+                type: "text",
+                text: `Give me a detailed explanation of the following SQL query in plain English:${sql} Make it very detailed and specific for a beginner to understand`
+            }
+        }]
+    }
+})
 
 
 async function main() {
